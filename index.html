@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Рокнроллы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="nav-links-bar">
+    <div class="container nav-container">
+        <button class="nav-link" data-modal="about"><i class="fas fa-info-circle"></i> О нас</button>
+        <button class="nav-link" data-modal="game"><i class="fas fa-gamepad"></i> Игровая</button>
+        <button class="nav-link" data-modal="delivery"><i class="fas fa-truck-fast"></i> Доставка и оплата</button>
+        <button class="nav-link" data-modal="contacts"><i class="fas fa-phone-alt"></i> Контакты</button>
+    </div>
+</div>
+
+<div class="hero">
+    <div class="container">
+        <div class="top-bar">
+            <div class="delivery-selector">
+                <div class="delivery-btn active" data-type="delivery"><i class="fas fa-motorcycle"></i> ДОСТАВКА</div>
+                <div class="delivery-btn" data-type="takeaway"><i class="fas fa-bag-shopping"></i> С СОБОЙ</div>
+            </div>
+            <div class="app-btn" id="downloadAppBtn"><i class="fas fa-download"></i> Скачай приложение! <i class="fab fa-android"></i><i class="fab fa-apple"></i></div>
+        </div>
+        <div class="brand-block">
+            <div class="logo-big">РОКН<span>РОЛЛЫ</span>!</div>
+            <div class="years"><i class="fas fa-guitar"></i> Нам 17 лет! <i class="fas fa-cake-candles"></i></div>
+            <div class="years" style="background: none; margin-top: 6px;">roknroll.ru</div>
+        </div>
+        <div class="gift-banner" id="giftBanner">
+            <div class="gift-text"><i class="fas fa-gift"></i><h3>Дарим подарки!</h3><span>Кликай для подробностей</span></div>
+            <div class="gift-badge">Акция к 17-летию</div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="main-layout">
+        <aside class="categories-sidebar">
+            <h4><i class="fas fa-compass"></i> Меню</h4>
+            <ul class="cat-list" id="categoryList">
+                <li data-category="novelties" class="active-cat"><i class="fas fa-star"></i> Новинки</li>
+                <li data-category="rolls"><i class="fas fa-fish"></i> Роллы</li>
+                <li data-category="combo"><i class="fas fa-layer-group"></i> Комбо / Сеты</li>
+                <li data-category="pizza"><i class="fas fa-pizza-slice"></i> Пицца</li>
+                <li data-category="hot"><i class="fas fa-fire"></i> Горячее</li>
+                <li data-category="salads"><i class="fas fa-leaf"></i> Салаты / Поке</li>
+                <li data-category="soups"><i class="fas fa-mug-hot"></i> Супы</li>
+                <li data-category="snacks"><i class="fas fa-drumstick-bite"></i> Закуски</li>
+                <li data-category="kids"><i class="fas fa-child"></i> Детское меню</li>
+                <li data-category="sauces"><i class="fas fa-mortar-pestle"></i> Соусы и добавки</li>
+            </ul>
+        </aside>
+        <div class="products-area" id="productsArea"></div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p><i class="fas fa-heart" style="color:#FF5A32;"></i> Рокнроллы! - Путь к твоему сердцу <i class="fas fa-drumstick-bite"></i></p>
+        <p>© 2026 Сеть "Рокнроллы" | Доставка вкуса 24/7</p>
+    </div>
+</footer>
+
+<div id="toastMsg" class="toast-msg">Добавлено в корзину</div>
+
+<div id="appModal" class="info-modal">
+    <div class="modal-window">
+        <button class="close-modal-btn" id="closeAppModalBtn" aria-label="Закрыть окно">&times;</button>
+        <i class="fas fa-mobile-alt" style="font-size: 3rem; color:#FFB347;"></i>
+        <h2>Рокнроллы в телефоне</h2>
+        <p>Заказывай быстрее, копи бонусы и получай эксклюзивные акции в приложении.</p>
+        <div style="display:flex; gap:16px; justify-content:center; margin-top:20px; flex-wrap:wrap;">
+            <div id="appStoreBtn" class="store-btn"><i class="fab fa-apple"></i> App Store</div>
+            <div id="googlePlayBtn" class="store-btn"><i class="fab fa-google-play"></i> Google Play</div>
+        </div>
+    </div>
+</div>
+
+<div id="dynamicModal" class="info-modal">
+    <div class="modal-window" id="modalContent">
+        <button class="close-modal-btn" id="closeDynamicModal" aria-label="Закрыть окно">&times;</button>
+        <div id="modalInner"></div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
